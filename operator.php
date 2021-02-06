@@ -45,11 +45,11 @@
 // echo '($a **= $b): '. ($a **= $b);
 
 
-$str1="abhishek";
-$str2="sinha";
+// $str1="abhishek";
+// $str2="sinha";
 // $str1.=$str2;
 // echo $str1;
-print($str1==$str2);
+// print($str1==$str2);
 
 
 // $x = 10;
@@ -110,6 +110,52 @@ print($str1==$str2);
 // var_dump($x<=$y);
 // echo '<br>';
 // var_dump($x>=$y);
+
+
+
+// $str = "Abhishek";
+// echo $status = $str?? 'anonymus';
+
+
+// $a = 50;
+// $b = 90;
+// if($a>30 and $b>$a){
+//     print("Success");
+// }
+
+
+// $status = TRUE && false;
+// echo $status?'True':'False';
+// $status = TRUE and false;
+// echo $status?'True':'False';
+
+
+// var_dump (True && FALSE);
+// var_dump (True || FALSE);
+// var_dump (True xor FALSE);
+// echo (True & FALSE);
+
+// $status1 = TRUE xor TRUE;
+// echo $status1 ? 'True':'False';
+// echo '<br/>';
+// $status1 = (TRUE xor true);
+// echo $status1 ? 'True':'False';
+// echo '<br/>';
+
+// $status1 = TRUE && FALSE;
+// echo $status1 ? 'True':'False';
+// echo '<br/>';
+// $status1 = (TRUE && FALSE);
+// echo $status1 ? 'True':'False';
+// echo '<br/>';
+
+// $status1 = TRUE and False;
+// echo $status1 ? 'True':'False';
+// echo '<br/>';
+// $status1 = (TRUE and FALSE);
+// echo $status1 ? 'True':'False';
+// echo '<br/>';
+
 
 
 

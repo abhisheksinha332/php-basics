@@ -4,6 +4,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\RedirectController;
+use App\Http\Controllers\LoopsController;
+use App\Http\Controllers\LoopController;
+use App\Http\Controllers\IfelseController;
+use App\Http\Controllers\NavController;
 use App\Http\Controllers\EmployeeController;
 
 use Illuminate\Support\Facades\Route;
@@ -175,7 +179,56 @@ Route::get('redirectcontroller2/{id}/{name}/{designation}/{department}/{salary}'
 return redirect()->route('controlredirect', compact('id','name','designation','department','salary'));
 });
 
+Route::get('/google',function(){
+    return redirect()->away('https://www.google.com/');
+});
 
+
+
+/* --------------------------- Blade Template ---------------------------------------*/
+
+Route::get('blade',function(){
+    return view('test3',['name'=>'Abhishek']);
+});
+
+Route::get('loops', [LoopsController::class, 'index']);
+
+Route::get('loop', [LoopController::class, 'index']);
+
+Route::get('ifelse',[IfelseController::class, 'index']);
+
+
+Route::get('switchcase/{i?}', function ($i=null) {
+    return view('switchcase',compact('i'));
+
+});
+
+
+// Route::get('/homes', function () {
+//     return view('home');
+
+// });
+
+// Route::get('/prod', function () {
+//     return view('product');
+
+// });
+
+// Route::get('/aboutus', function () {
+//     return view('about');
+
+// });
+
+// Route::get('/help', function () {
+//     return view('help');
+
+// });
+
+
+Route::get('homes', [NavController::class, 'home']);
+Route::get('product', [NavController::class, 'product']);
+Route::get('aboutus', [NavController::class, 'about']);
+Route::get('help', [NavController::class, 'help']);
 
 
 
