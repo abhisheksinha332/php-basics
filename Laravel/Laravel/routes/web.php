@@ -233,3 +233,13 @@ Route::get('help', [NavController::class, 'help']);
 
 
 
+
+Route::get('/img', function () {
+    return view('img');
+});
+
+Route::get('/let', function(){
+    return view('test5');
+});
+
+

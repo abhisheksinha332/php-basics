@@ -16,10 +16,10 @@
 // echo "<br>";
 // echo 'Exponentiation is: '. ($a ** $b);
 
-// $color1 = "red";
-// $color2 = "1";
-// $color3 = "grey";
-// echo "$color1" + "$color2" . "$color3";
+$color1 = "red";
+$color2 = "1";
+$color3 = "grey";
+echo "$color1" + "$color2" + "$color3";
 
 
 // $x = 4;

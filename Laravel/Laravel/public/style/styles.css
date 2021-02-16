@@ -1,0 +1,35 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+}
+body{
+    background: rgb(0, 89, 255);
+
+}
+
+
+nav ul{
+    color:white;
+    font-size:12px;
+    margin-right:25px;
+    float:right;
+
+}
+nav ul li{
+    float:left;
+    margin: 5px 10px;
+    list-style: none;
+
+}
+nav ul li a{
+    text-decoration:none;
+
+    color: white;
+}
+
+img{
+    height: 100px;
+}
+

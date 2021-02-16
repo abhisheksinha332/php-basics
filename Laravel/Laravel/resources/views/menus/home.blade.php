@@ -4,4 +4,6 @@
 
 @section('content')
 <h1>This is Home Page</h1>
+
+<img src="\images\pen.png" />
 @endsection
