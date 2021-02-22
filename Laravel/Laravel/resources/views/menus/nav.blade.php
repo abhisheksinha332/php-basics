@@ -11,9 +11,13 @@
         padding:0;
         box-sizing:border-box
     }
-    nav{
-        background:black;
+    .nav{
+        background-color:black;
         color:black;
+        width:100%;
+        height:30px;
+        line-height:18px;
+
 
     }
     nav ul{
@@ -21,6 +25,9 @@
         font-size:12px;
         margin-right:25px;
         float:right;
+        display:flex;
+        justify-content:space-around;
+        width:50%;
 
     }
     nav ul li{
@@ -37,7 +44,7 @@
 </head>
 <body>
 
-    <nav>
+    <nav class="nav">
     <ul>
         <li><a href="/homes">Home</a></li>
         <li><a href="/product">Product</a></li>

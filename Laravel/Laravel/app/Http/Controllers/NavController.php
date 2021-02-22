@@ -10,7 +10,8 @@ class NavController extends Controller
         return view('menus.home');
     }
     public function product(){
-        return view('menus.product');
+        $products = ['Fruits','Vegetables','Coldrink'];
+        return view('menus.product',compact('products'));
     }
     public function about(){
         return view('menus.about');

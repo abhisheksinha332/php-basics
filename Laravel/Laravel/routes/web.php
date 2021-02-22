@@ -242,4 +242,23 @@ Route::get('/let', function(){
     return view('test5');
 });
 
+Route::get('menuhome', function(){
+    return view('Menus1.home');
+});
+Route::get('menuabout', function(){
+    return view('Menus1.about');
+});
+Route::get('menuproduct', function(){
+    $product = [
+        ['brand'=>'puma','type'=>'bag','cost'=>900],
+        ['brand'=>'Gucci', 'type'=>'T-shirt', 'cost'=>1900],
+        ['brand'=>'Reebok', 'type'=>'bat', 'cost'=>1000],
+        ['brand'=>'Adidas', 'type'=>'shoes', 'cost'=>3000],
+        ['brand'=>'Woodlands', 'type'=>'shoes', 'cost'=>2400],
+];
+    return view('Menus1.product',['product'=>$product]);
+});
+Route::get('menucontact', function(){
+    return view('Menus1.contact');
+});
 
