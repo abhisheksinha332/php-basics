@@ -65,6 +65,7 @@ function func1($a,$b) {
 function func2(&$a,&$b) {
   
   return ($a+$b);
+  echo "<br>";
 }
 $a=3;
 $b=4;
@@ -72,4 +73,21 @@ $b=4;
     echo func2($a,$b);
 
 ?>
+
+
+<?php
+
+function statics(){
+  static $a = 6;
+  $a = $a+2;
+  echo $a;
+}
+
+statics();
+statics();
+
+?>
+
+
+
 

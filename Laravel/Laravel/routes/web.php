@@ -9,7 +9,8 @@ use App\Http\Controllers\LoopController;
 use App\Http\Controllers\IfelseController;
 use App\Http\Controllers\NavController;
 use App\Http\Controllers\EmployeeController;
-
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UrlController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -262,3 +263,45 @@ Route::get('menucontact', function(){
     return view('Menus1.contact');
 });
 
+
+Route::get('users1/profile', [ProfileController::class, 'show'])->name('profile');
+Route::get('verifyuser',[ ProfileController::class, 'verifyUser']);
+
+Route::get('users1/{id}/{name}/profile',function($id,$name){
+    return "My name is ".$name.' and My id is '.$id;
+})->name('userData');
+Route::get('getuser',[ ProfileController::class, 'getUser']);
+
+
+//   ------------ Prefix routing ---------------
+
+Route::prefix('admin')->group(function(){
+    Route::get('routing',function(){
+        return "Hey there";
+    });
+});
+
+//-------------------------------------------
+
+Route::name('admin.')->group(function(){
+    Route::get('routing',function(){
+        return "Hey there this is prefix route";
+    })->name('user');
+});
+
+Route::get('adminredirect',function(){
+    return redirect()->route('admin.user');
+});
+
+//-------------------------------------------
+
+
+Route::get('foo/bar', [UrlController::class, 'index']);
+
+//---------------------------------------------
+
+Route::get('formdata',function(){
+    return view('form.register');
+});
+
+Route::post('users5/register',[])

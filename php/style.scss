@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    background: black;
+    color: white;
+    height: 45px;
+    ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        float:left;
+        li{
+           list-style-type: none;
+           float:right;
+           a{
+               text-decoration: none;
+               color: white;
+               font-weight:600;
+               font-size: 20px;
+               padding: auto;
+           }
+        }
+    }
+}
