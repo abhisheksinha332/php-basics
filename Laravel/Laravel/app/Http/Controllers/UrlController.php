@@ -21,6 +21,10 @@ class UrlController extends Controller
         echo "The isMethod method $method";
         echo "<br/>";
 
+        $method =$request->method();
+        echo 'Metod is '.$method;
+        echo "<br/>";
+
         $url = $request->url();
         echo "The is url method $url";
         echo "<br/>";
@@ -28,5 +32,8 @@ class UrlController extends Controller
         $url1 = $request->fullurl();
         echo "The is fullurl method $url1";
         echo "<br/>";
+
+        $routeis = $request->routeIs('user.*');
+        echo "routeIs : ".$routeis;
     }
 }

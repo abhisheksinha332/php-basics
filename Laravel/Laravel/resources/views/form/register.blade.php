@@ -7,9 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <input type="text" name="fname" placeholder="First Name">
-        <!-- <input type="text" name="lname" placeholder="Last Name"> -->
+    <form action="userss/formdata" action="POST">
+    @csrf
+        <input type="text" name="username" placeholder="UserName">
+         <input type="text" name="password" placeholder="Password">
         <input type="submit" value="submit">
     </form>
 </body>

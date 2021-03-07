@@ -11,6 +11,7 @@ use App\Http\Controllers\NavController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UrlController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -296,7 +297,7 @@ Route::get('adminredirect',function(){
 //-------------------------------------------
 
 
-Route::get('foo/bar', [UrlController::class, 'index']);
+Route::get('foo/bar', [UrlController::class, 'index'])->name('user.profile');
 
 //---------------------------------------------
 
@@ -304,4 +305,10 @@ Route::get('formdata',function(){
     return view('form.register');
 });
 
-Route::post('users5/register',[])
+// Route::post('users5/register',[])
+
+// Route::get('/register',function(){
+//     return view('register');
+// });
+
+Route::post('userss/formdata',[UserController::class, 'submission']);
