@@ -15,5 +15,24 @@
             <li><a href="#">About</li>
         </ul>
     </nav>
+
+    <form method="post">
+    <select name = "day">
+    <option value="Sunday">Sunday</option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Thurdday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturdat">Saturday</option>
+    </select>
+    <input type="submit" name="submit" value="send">
+
+
+    </form>
+    <?php
+    if(isset($_POST['day']))
+    echo "Today is ".htmlspecialchars($_POST['day']);
+
+    ?>
 </body>
 </html>

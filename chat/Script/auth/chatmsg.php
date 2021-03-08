@@ -13,6 +13,7 @@ if(isset($_SESSION['unq_id'])){
     // OR (outgoing_msg_id ={$incoming_id} AND incoming_msg_id = {$outgoing_id} ) ORDER BY msg_id asc";
     
     $sql = "SELECT * FROM messages 
+    LEFT JOIN userdata ON userdata.unq_id = messages.outgoing_msg_id
     WHERE (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id})
     OR (outgoing_msg_id = {$incoming_id} AND incoming_msg_id = {$outgoing_id}) ORDER BY msg_id";
 
@@ -31,8 +32,7 @@ if(isset($_SESSION['unq_id'])){
             else{
                // echo $row['outgoing_msg_id']. "    ".$outgoing_id;
                 $output .= '<div class="chat chat-receive">
-                <img src="/images/'.$row['profile'].'" alt="">
-               
+               <img src="script/auth/images/'.$row['profile'].'" alt="">
                 <div class="details">
                 <p>'.$row['msg'].'</p>
                 </div>

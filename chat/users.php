@@ -29,7 +29,7 @@ if(!isset( $_SESSION['unq_id'])){
                         <p><?php echo $row['status']  ?></p>
                     </div>
                 </div>
-                <a href="#" class="logout">Logout</a>
+                <a href="Script/auth/logout.php?logout_id=<?php echo $row['unq_id'] ?>" class="logout">Logout</a>
             </header>
             <div class="search-box">
                 <p class="text">Select an user to start conversation</p>
@@ -46,7 +46,7 @@ if(!isset( $_SESSION['unq_id'])){
         </div> 
         
     </div>
-
+  
 
     <script src="Script/users.js"></script>
 </body>

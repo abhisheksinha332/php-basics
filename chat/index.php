@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if(isset($_SESSION['unq_id'])){
+    header("location: users.php");
+}
+
+?>
+
+
 <?php  include_once "header.php" ;  ?>
 <body>
     <div class="wrapper">

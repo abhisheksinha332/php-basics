@@ -2,7 +2,8 @@
 
 session_start();
 include_once "signup-config.php";
-$sql = mysqli_query($con, "SELECT * FROM userdata");
+$outgoing_id = $_SESSION['unq_id'];
+$sql = mysqli_query($con, "SELECT * FROM userdata  WHERE NOT unq_id = {$outgoing_id}  ");
 $output = "";
 
 
