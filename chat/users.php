@@ -10,7 +10,7 @@ if(!isset( $_SESSION['unq_id'])){
  
  <?php  include_once "header.php" ;  ?>
 <body>
-    <div class="wrapper"> 
+    <div class="wrapper1"> 
         <div class=" logins">
            <div class="users">
            <?php 
@@ -23,7 +23,7 @@ if(!isset( $_SESSION['unq_id'])){
            ?>
             <header>
                 <div class="content">
-                    <img src="script/auth/images/<?php echo $row['profile'] ?>" alt="">
+                    <img src="script/auth/images/<?php echo $row['profile'] ?>" alt="" ">
                     <div class="detail">
                         <span><?php echo $row['fname']," ".$row['lname'] ?></span>
                         <p><?php echo $row['status']  ?></p>

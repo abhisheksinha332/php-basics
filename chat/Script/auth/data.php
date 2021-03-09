@@ -29,11 +29,11 @@
                 <p>'. $you . $msg.'</p>
             </div>
         </div>
-        <div class="status-icon offline "> 
-        </div>
+        
     </a>';
 
-
+    // <div class="status-icon '.$offline.' "> 
+    // </div>
 }
 
 

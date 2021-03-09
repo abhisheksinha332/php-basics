@@ -1,7 +1,6 @@
 const searchBar = document.querySelector(".users .search-box input"),
 searchBtn = document.querySelector(".users .search-box span"),
 userList = document.querySelector(".users .user-list");
-console.log("hello");
 
 // searchBtn.onclick = () => {
 //     alert("Hey");

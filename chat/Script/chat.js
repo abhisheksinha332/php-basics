@@ -5,7 +5,6 @@ chatBox = document.querySelector(".chat-place");
 
 sendBtn.onclick = () => {
     
-    console.log("yo");
     let xhr = new XMLHttpRequest();
     xhr.open("POST","Script/auth/chat.php", true);
     xhr.onload = () => {
@@ -19,7 +18,9 @@ sendBtn.onclick = () => {
     }
     let formData = new FormData(form);
     xhr.send(formData);
+    
 }
+
 
 chatBox.onmouseenter = () => { 
     chatBox.classList.add("active");

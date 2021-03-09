@@ -11,7 +11,7 @@ if(!isset( $_SESSION['unq_id'])){
 
 <?php  include_once "header.php" ;  ?>
 <body>
-    <div class="wrapper">
+    <div class="wrapper1">
         <div class=" chat-box">
            <div class="chat-area">
             <header>
@@ -25,8 +25,10 @@ if(!isset( $_SESSION['unq_id'])){
                 }
 
            ?>
-                <a href="users.php"><i class="fas fa-arrow-left"></i> </a>
-                <img src="script/auth/images/<?php echo $row['profile'] ?>" alt="">
+                <a href="users.php"><span class="material-icons">
+arrow_back
+</span> </a>
+                <img src="script/auth/images/<?php echo $row['profile'] ?>" alt="" style="margin-left:10px; margin-right:10px">
                     <div class="detail">
                         <span><?php echo $row['fname']." ".$row['lname']; ?></span>
                         <p><?php echo $row['status'];  ?></p>
@@ -35,7 +37,7 @@ if(!isset( $_SESSION['unq_id'])){
             </header>
             <div class="chat-place">
                
-            
+           
             </div>
             <form action="#" class="form-type">
                 <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unq_id'];   ?> " hidden>

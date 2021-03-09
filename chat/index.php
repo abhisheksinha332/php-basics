@@ -11,6 +11,7 @@ if(isset($_SESSION['unq_id'])){
 <?php  include_once "header.php" ;  ?>
 <body>
     <div class="wrapper">
+        
         <div class=" signup">
             <h1 class="title">Chat Application</h1>
             <form action="#" enctype="multipart/form-data">
